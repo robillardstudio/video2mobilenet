@@ -1,13 +1,8 @@
-// Copyright (c) 2019 ml5
-//
-// This software is released under the MIT License.
-// https://opensource.org/licenses/MIT
+// Gaëtan Robillard
+// Reading, stacking (video2mobilenet), 2024.
 
-/* ===
-ml5 Example
-Webcam Image Classification using MobileNet and p5.js
-This example uses a callback pattern to create the classifier
-=== */
+// Only works on mobilephone devices with front camera ("environment")
+// The code takes the cam as input and outputs the classification as html text
 
 let classifier;
 let video;
