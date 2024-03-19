@@ -20,7 +20,7 @@ function setup() {
     audio: false,
     video: {
       facingMode: {
-        exact: "user"
+        exact: "environment" //user or environment
       }
     }
   }
@@ -38,8 +38,8 @@ function draw() {
   background(255); // Clear the background
   
   // Display the capture, centered at the top
-  let captureWidth = 320;
-  let captureHeight = 240;
+  let captureWidth = 240;
+  let captureHeight = 320;
   let x = (width - captureWidth) / 2;
   let y = 0;
   
