@@ -20,7 +20,7 @@ function setup() {
     audio: false,
     video: {
       facingMode: {
-        exact: "environment"
+        exact: "user"
       }
     }
   }
@@ -38,10 +38,10 @@ function draw() {
   background(255); // Clear the background
   
   // Display the capture, centered at the top
-  let captureWidth = 320; // Width of the capture display
-  let captureHeight = 240; // Height of the capture display
-  let x = (width - captureWidth) / 2; // Calculate the x position
-  let y = 0; // Set at the top of the canvas
+  let captureWidth = 320;
+  let captureHeight = 240;
+  let x = (width - captureWidth) / 2;
+  let y = 0;
   
   image(capture, x, y, captureWidth, captureHeight); // Draw the capture at the specified location and size
 
