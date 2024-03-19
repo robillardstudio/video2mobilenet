@@ -25,26 +25,25 @@ function setup() {
     }
   }
   
+  // camera input
   capture = createCapture(constraints);
-  
   capture.hide();
 
-  // hatch();
-  // hatch();
-  // circles(20*f);
-
-  // Create a camera input
-  // video = createCapture(VIDEO);
-  // video.hide()
-  // Initialize the Image Classifier method with MobileNet and the video as the second argument
   resultsP = createP('Loading model and video...');
   resultsP.style('font-size', '128px');
   classifier = ml5.imageClassifier('MobileNet', capture, modelReady);
 }
 
 function draw() {
+  background(255); // Clear the background
   
-     //image(capture, 0, 0);
+  // Display the capture, centered at the top
+  let captureWidth = 320; // Width of the capture display
+  let captureHeight = 240; // Height of the capture display
+  let x = (width - captureWidth) / 2; // Calculate the x position
+  let y = 0; // Set at the top of the canvas
+  
+  image(capture, x, y, captureWidth, captureHeight); // Draw the capture at the specified location and size
 
 }
 
@@ -64,27 +63,4 @@ function gotResult(err, results) {
   // resultsP.html(results[0].label + ' ' + nf(results[0].confidence, 0, 2));
   resultsP.html(results[0].label);
   classifyVideo();
-}
-
-// random hatchings
-function hatch(){
-  var y_pos = random(height-80);
-  for (var i = 0; i < 50; i++){
-    var x_1 = randomGaussian(200,30);
-    line(x_1, y_pos, x_1, y_pos+80);
-  }
-}
-
-// random circles
-function circles(d){
-  var delta1;
-  var delta2;
-  var pos_x = random(width);
-  var pos_y = random(height);
-  for (var i = 0; i<20; i++){
-    delta1 = random(50);
-    delta2 = random(50);
-    delta3  = random(10,30);
-    ellipse(pos_x+delta1, pos_y+delta2, d+delta3, d+delta3);
-  }
 }
