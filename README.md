@@ -6,9 +6,9 @@ Pour citer :
 
 > Gaëtan Robillard, « Stacking : Espace public et vision machine (video2mobilenet demo) », in Jean-Ambroise Vesac (dir.), *RC en XR : La recherche-création en réalité étendue*, Rencontre Interdisciplinaire Hexagram, 2024.
 
-Pensée pour expérimenter l'articulation entre espace urbain et vision machine, cette démo a pour but d'intéragir avec le modèle d'apprentissage profond MobileNet. Le programme utilise la caméra `environnement` en tant qu'entrée, et affiche la sortie en texte html.
+Pensée pour expérimenter l'articulation entre espace urbain et vision machine, cette démo a pour but d'intéragir avec le modèle d'apprentissage profond MobileNet. Le programme utilise la caméra `environnement` d'un téléphone mobile en tant qu'entrée, et affiche la sortie en texte html dans le navigator.
 
-*Thought of as an experiment for articulating urban space and machine vision, this demo aims at interacting with MobileNet deep learning model. The software uses mobile phone `environment` camera as input and displays output in html text.*
+*Thought of as an experiment for articulating urban space and machine vision, this demo aims at interacting with MobileNet deep learning model. The software uses mobile phone `environment` camera as input and displays output in html text, in the webrowser.*
 
 ----
 
