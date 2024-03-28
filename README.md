@@ -1,5 +1,7 @@
 # Video2mobilenet Demo
 
+<!-- image -->
+
 Pour citer :
 
 > Gaëtan Robillard, « Stacking : Espace public et vision machine (video2mobilenet demo) », in Jean-Ambroise Vesac (dir.), *RC en XR : La recherche-création en réalité étendue*, Rencontre Interdisciplinaire Hexagram, 2024.
