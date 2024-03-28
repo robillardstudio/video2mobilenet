@@ -8,6 +8,16 @@ Pensée comme expériementation pour penser espace urbain et vision machine, le 
 
 *Thought of as an experiment for thinking the encountering of urban space and machine vision, this demo aims at interacting with MobileNet trained model. The software uses mobile phone `environment` camera as input and displays output in html text.*
 
+----
 Demo (tested on Android mobile phone) [https://robillardstudio.github.io/video2mobilenet/index.html](https://robillardstudio.github.io/video2mobilenet/index.html)
 
-Références : Dan Graham, Valie Export, Philippe Parreno (Snaking), Benjamin Bratton (The Stack)
+----
+
+Travail préalable :
+
+Gaëtan Robillard, « Machine Unlearning (MobileNet2gif Demo) », *Images trompeuses et modèles d'intelligence artificielle*, Groupe de recherche international Arcanes, 2023. Adresse : [https://robillardstudio.github.io/mobilenet2gif](Gaëtan Robillard, Machine Unlearning (MobileNet2gif) Demo, 2023.
+)
+
+Références :
+
+Dan Graham, Valie Export, Philippe Parreno (Snaking), Benjamin Bratton (The Stack)
