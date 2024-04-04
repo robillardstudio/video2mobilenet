@@ -12,13 +12,11 @@ Pensée pour expérimenter l'articulation entre espace urbain et vision machine,
 
 *Thought of as an experiment for articulating urban space and machine vision, this demo aims at interacting with MobileNet deep learning model. The software uses mobile phone `environment` camera as input and displays output in html text, in the webrowser.*
 
-----
+## Démo
 
 <img src="medias/screenshot_1.png" height="600">
 
 Demo (testé sur Android) [https://robillardstudio.github.io/video2mobilenet/index.html](https://robillardstudio.github.io/video2mobilenet/index.html)
-
-----
 
 ## Travail préalable
 
