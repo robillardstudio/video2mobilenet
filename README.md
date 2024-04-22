@@ -8,7 +8,7 @@ Pour citer :
 
 ## Résumé
 
-Pensée pour expérimenter l'articulation entre espace urbain et vision machine, cette démo a pour but d'intéragir avec le modèle d'apprentissage profond MobileNet. Le programme utilise la caméra `environnement` d'un téléphone mobile en tant qu'entrée, et affiche la sortie en texte html dans le navigateur.
+Pensée pour expérimenter l'articulation entre espace urbain et vision machine, cette démo a pour but d'interagir avec le modèle d'apprentissage profond MobileNet. Le programme utilise la caméra `environnement` d'un téléphone mobile en tant qu'entrée, et affiche la sortie en texte html dans le navigateur.
 
 *Thought of as an experiment for articulating urban space and machine vision, this demo aims at interacting with MobileNet deep learning model. The software uses mobile phone `environment` camera as input and displays output in html text, in the webrowser.*
 
