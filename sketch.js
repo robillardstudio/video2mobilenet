@@ -15,7 +15,7 @@ function setup() {
     audio: false,
     video: {
       facingMode: {
-        exact: "environment" //user or environment
+        exact: "user" //user or environment
       }
     }
   }
@@ -57,5 +57,5 @@ function gotResult(results) {
   // The results are in an array ordered by confidence.
   // resultsP.html(results[0].label + ' ' + nf(results[0].confidence, 0, 2));
   resultsP.html(results[0].label);
-  classifyVideo();
+  // classifyVideo();
 }
