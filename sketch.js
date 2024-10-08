@@ -5,13 +5,23 @@
 // The code takes the cam as input and outputs the classification as html text
 
 let classifier;
+let canvas ;
 let video;
 let resultsP;
 let capture;
 
+let constraints;
+
+function preload() {
+  //Models available are: 'MobileNet', 'Darknet' and 'Darknet-tiny','DoodleNet'...
+  classifier = ml5.imageClassifier('MobileNet'); //
+}
+
 function setup() {
-  createCanvas(displayWidth, displayHeight);
-  var constraints = {
+  canvas = createCanvas(displayWidth, displayHeight);
+  
+  // Switch camera
+  constraints = {
     audio: false,
     video: {
       facingMode: {
@@ -26,11 +36,14 @@ function setup() {
 
   resultsP = createP('Loading model and video...');
   resultsP.style('font-size', '128px');
-  classifier = ml5.imageClassifier('MobileNet', capture, modelReady);
+
+  checkbox = createCheckbox('switch rear/front camera', false);
+  checkbox.position(10, 90);
+  checkbox.changed(switchCamera);
 }
 
 function draw() {
-  background(255); // Clear the background
+  // background(255); // Clear the background
   
   // Display the capture, centered at the top
   let captureWidth = 240;
@@ -39,17 +52,21 @@ function draw() {
   let y = 0;
   
   image(capture, x, y, captureWidth, captureHeight); // Draw the capture at the specified location and size
-
+  classifier.classify(capture, gotResult);
 }
 
-function modelReady() {
-  console.log('Model Ready');
-  classifyVideo();
-}
+// Function to handle camera switch based on checkbox state
+function switchCamera() {
+  // Check if checkbox is checked, then switch to 'environment' or 'user'
+  let newFacingMode = checkbox.checked() ? "environment" : "user";
 
-// Get a prediction for the current video frame
-function classifyVideo() {
-  classifier.classify(gotResult);
+  // Update constraints with the new facingMode
+  constraints.video.facingMode.exact = newFacingMode;
+
+  // Stop the previous capture and start a new one with updated constraints
+  capture.remove(); // Remove the existing capture
+  capture = createCapture(constraints); // Create new capture with updated constraints
+  capture.hide();
 }
 
 // When we get a result
@@ -57,5 +74,4 @@ function gotResult(results) {
   // The results are in an array ordered by confidence.
   // resultsP.html(results[0].label + ' ' + nf(results[0].confidence, 0, 2));
   resultsP.html(results[0].label);
-  // classifyVideo();
 }
