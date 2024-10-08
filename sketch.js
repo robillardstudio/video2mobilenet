@@ -36,6 +36,7 @@ function setup() {
 
   resultsP = createP('Loading model and video...');
   resultsP.style('font-size', '128px');
+  resultsP.position(10, 200);
 
   // checkbox = createCheckbox('switch rear/front camera', false);
   // checkbox.position(10, 90);
