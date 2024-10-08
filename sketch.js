@@ -25,7 +25,7 @@ function setup() {
     audio: false,
     video: {
       facingMode: {
-        exact: "user" //user or environment
+        exact: "environment" //user or environment
       }
     }
   }
@@ -37,9 +37,9 @@ function setup() {
   resultsP = createP('Loading model and video...');
   resultsP.style('font-size', '128px');
 
-  checkbox = createCheckbox('switch rear/front camera', false);
-  checkbox.position(10, 90);
-  checkbox.changed(switchCamera);
+  // checkbox = createCheckbox('switch rear/front camera', false);
+  // checkbox.position(10, 90);
+  // checkbox.changed(switchCamera);
 }
 
 function draw() {
@@ -56,18 +56,19 @@ function draw() {
 }
 
 // Function to handle camera switch based on checkbox state
-function switchCamera() {
-  // Check if checkbox is checked, then switch to 'environment' or 'user'
-  let newFacingMode = checkbox.checked() ? "environment" : "user";
+// function switchCamera() {
+//   // Check if checkbox is checked, then switch to 'environment' or 'user'
+//   let newFacingMode = checkbox.checked() ? "environment" : "user";
+//   console.log("Switching camera to: ", newFacingMode);
 
-  // Update constraints with the new facingMode
-  constraints.video.facingMode.exact = newFacingMode;
+//   // Update constraints with the new facingMode
+//   constraints.video.facingMode.exact = newFacingMode;
 
-  // Stop the previous capture and start a new one with updated constraints
-  capture.remove(); // Remove the existing capture
-  capture = createCapture(constraints); // Create new capture with updated constraints
-  capture.hide();
-}
+//   // Stop the previous capture and start a new one with updated constraints
+//   capture.remove(); // Remove the existing capture
+//   capture = createCapture(constraints); // Create new capture with updated constraints
+//   capture.hide();
+// }
 
 // When we get a result
 function gotResult(results) {
