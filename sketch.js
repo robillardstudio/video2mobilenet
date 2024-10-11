@@ -7,7 +7,7 @@
 // - takes the cam as input.
 // - outputs classification as html text
 // More to do:
-// - switch user and environment camera
+// - switch "user" and "environment" camera
 // - hide or show the capture
 
 let classifier;
@@ -37,7 +37,6 @@ function setup() {
   
   // camera input
   capture = createCapture(constraints);
-  capture.hide();
 
   resultsP = createP('Loading model and video...');
   resultsP.style('font-size', '128px');
@@ -45,21 +44,31 @@ function setup() {
 
   checkbox = createCheckbox('switch user/environment camera', false);
   checkbox.position(10, 90);
+
+  // checkboxH = createCheckbox('hide capture', false);
+  // checkboxH.position(10, 110);
 }
 
 function draw() {
   // background(255); // Clear the background
 
   whichCam();
+  // hide();
 
   // Display the capture, centered at the top
   let captureWidth = 240;
   let captureHeight = 320;
   let x = (width - captureWidth) / 2;
   let y = 0;
-  
+
   image(capture, x, y, captureWidth, captureHeight); // Draw the capture at the specified location and size
+
   // classifier.classify(capture, gotResult);
+}
+
+function hide() {
+
+
 }
 
 function whichCam(){
