@@ -43,7 +43,7 @@ function setup() {
   resultsP.position(10, 500);
 
   checkbox = createCheckbox('switch user/environment camera', false);
-  checkbox.position(10, 90);
+  checkbox.position(10, 600);
 
   // checkboxH = createCheckbox('hide capture', false);
   // checkboxH.position(10, 110);
