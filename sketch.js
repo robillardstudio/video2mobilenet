@@ -25,7 +25,7 @@ function setup() {
     audio: false,
     video: {
       facingMode: {
-        exact: "environment" //user or environment
+        exact: "user" //user or environment
       }
     }
   }
