@@ -19,7 +19,7 @@ let constraints;
 
 function preload() {
   //Models available are: 'MobileNet', 'Darknet' and 'Darknet-tiny','DoodleNet'...
-  // classifier = ml5.imageClassifier('MobileNet'); //
+  classifier = ml5.imageClassifier('MobileNet'); //
 }
 
 function setup() {
@@ -63,7 +63,7 @@ function draw() {
 
   image(capture, x, y, captureWidth, captureHeight); // Draw the capture at the specified location and size
 
-  // classifier.classify(capture, gotResult);
+  classifier.classify(capture, gotResult);
 }
 
 function hide() {
@@ -91,8 +91,8 @@ function switchCamera() {
 }
 
 // When we get a result
-// function gotResult(results) {
-//   // The results are in an array ordered by confidence.
-//   // resultsP.html(results[0].label + ' ' + nf(results[0].confidence, 0, 2));
-//   resultsP.html(results[0].label);
-// }
+function gotResult(results) {
+  // The results are in an array ordered by confidence.
+  // resultsP.html(results[0].label + ' ' + nf(results[0].confidence, 0, 2));
+  resultsP.html(results[0].label);
+}
