@@ -37,6 +37,7 @@ function setup() {
   
   // camera input
   capture = createCapture(constraints);
+  capture.hide();
 
   resultsP = createP('Loading model and video...');
   resultsP.style('font-size', '128px');
