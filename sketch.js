@@ -46,15 +46,13 @@ function setup() {
 function draw() {
   // background(255); // Clear the background
 
-  // hide();
-
   // Display the capture, centered at the top
-  let captureWidth = 240;
-  let captureHeight = 320;
-  let x = (width - captureWidth) / 2;
-  let y = 0;
+  // let captureWidth = 240;
+  // let captureHeight = 320;
+  // let x = (width - captureWidth) / 2;
+  // let y = 0;
 
-  image(capture, x, y, captureWidth, captureHeight); // Draw the capture at the specified location and size
+  // image(capture, x, y, captureWidth, captureHeight); // Draw the capture at the specified location and size
 
   classifier.classify(capture, gotResult);
 }
