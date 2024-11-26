@@ -47,7 +47,7 @@ function setup() {
 function draw() {
   // background(255); // Clear the background
 
-  // Display the capture, centered at the top
+  // Display the capture, centered at the top left
   // let captureWidth = 240;
   // let captureHeight = 320;
   // let x = (width - captureWidth) / 2;
