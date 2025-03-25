@@ -16,7 +16,7 @@ Pensée pour expérimenter l'articulation entre espace urbain et vision machine,
 
 <img src="medias/screenshot_1.png" height="600">
 
-Demo (testé sur Android) [https://robillardstudio.github.io/video2mobilenet/index.html](https://robillardstudio.github.io/video2mobilenet/index.html)
+Demo (testé sur Android et MAC OS Safari) [https://robillardstudio.github.io/video2mobilenet/index.html](https://robillardstudio.github.io/video2mobilenet/index.html)
 
 ## Travail préalable
 
